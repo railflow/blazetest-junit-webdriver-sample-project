@@ -14,6 +14,24 @@ Since this is a set of tests for a web application using Selenium and WebDriver,
 
 By default the tests uses Chrome. This means you must have a compatible version of `chromedriver` installed on your system. You can find the latest available versions at https://googlechromelabs.github.io/chrome-for-testing/.
 
+## Running Tests ##
+
+Tests can be executed using the following command.
+
+    mvn test <options>
+
+The following system parameters can be used to configure the test execution.
+
+| Parameter      | Description                                                               |
+|----------------|---------------------------------------------------------------------------|
+| delay=N        | Add a random delay between 0.5s to N seconds between each test execution. |
+| driver=chrome  | Use the Chrome browser and driver (default).                              |
+| driver=firefox | Use the FireFox browser and driver.                                       |
+
+For example, tests can be run using the FireFox browser with a maximum random delay of 5 seconds between tests as follows.
+
+    mvn test -Ddelay=5 -Ddriver=firefox
+
 ## Extracting Tests ##
 
 You can use the TestExtractor utility to extract tests from this project as follows.
